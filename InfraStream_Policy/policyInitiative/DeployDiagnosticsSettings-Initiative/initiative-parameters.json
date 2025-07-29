@@ -1,0 +1,602 @@
+{
+    "logAnalytics-CommonParameter": {
+        "type": "String",
+        "metadata": {
+          "displayName": "logAnalytics-CommonParameter",
+          "description": "Log Analytics Workspace",
+          "strongType": "omsWorkspace",
+          "assignPermissions": true
+        }
+      },
+    "diagnosticSettingName-CommonParameter": {
+        "type": "String",
+        "metadata": {
+          "displayName": "diagnosticSettingName-CommonParameter",
+          "description": "Diagnostic Setting Name"
+        },
+        "defaultValue": "setByPolicy-LogAnalytics"
+      },
+    "categoryGroup-CommonParameter": {
+        "type": "String",
+        "metadata": {
+          "displayName": "categoryGroup-CommonParameter",
+          "description": "Diagnostic category group - none, audit, or allLogs."
+        },
+        "allowedValues": [
+          "audit",
+          "allLogs"
+        ],
+        "defaultValue": "audit"
+      },
+      "resourceLocationList-CommonParameter": {
+        "type": "Array",
+        "metadata": {
+          "displayName": "resourceLocationList-CommonParameter",
+          "description": "Resource Location List to send logs to nearby Log Analytics. A single entry \"*\" selects all locations (default)."
+        },
+        "defaultValue": [
+          "*"
+        ]
+      },   
+    "effect-DeployDiagnosticsSignalR": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsSignalR",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "DeployIfNotExists",
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsNSG": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsSignalR",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsFrontDoor": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsFrontDoor",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsAA": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsAA",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsFrontDoorCDN": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsFrontDoorCDN",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsLoadBalancer": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsLoadBalancer",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsEventGridTopic": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsEventGridTopic",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsAnalysisService": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsAnalysisService",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsCosmosDB": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsCosmosDB",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsDataFactory": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsDataFactory",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsMySQL": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsMySQL",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsPostgreSQL": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsPostgreSQL",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsPostgreSQLFlexibleservers": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsPostgreSQLFlexibleservers",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsMySQLFlexibleservers": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsMySQLFlexibleservers",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsDatabricks": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsDatabricks",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsAPIMgmt": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsAPIMgmt",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsWebsiteFunction": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsWebsiteFunction",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+    "effect-DeployDiagnosticsDataExplorerCluster": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect-DeployDiagnosticsDataExplorerCluster",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },   
+      "effect-DeployDiagnosticsDataExplorerClusterSynaps": {
+          "type": "String",
+          "metadata": {
+            "displayName": "effect-DeployDiagnosticsDataExplorerClusterSynaps",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "defaultValue": "DeployIfNotExists"
+        },   
+      "effect-DeployDiagnosticsFirewall": {
+          "type": "String",
+          "metadata": {
+            "displayName": "effect-DeployDiagnosticsFirewall",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "defaultValue": "DeployIfNotExists"
+        },   
+      "effect-DeployDiagnosticsACR": {
+          "type": "String",
+          "metadata": {
+            "displayName": "effect-DeployDiagnosticsACR",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "defaultValue": "DeployIfNotExists"
+        },   
+      "effect-DeployDiagnosticsACApp": {
+          "type": "String",
+          "metadata": {
+            "displayName": "effect-DeployDiagnosticsACApp",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "defaultValue": "DeployIfNotExists"
+        },   
+      "effect-DeployDiagnosticsEventGridSystemTopic": {
+          "type": "String",
+          "metadata": {
+            "displayName": "effect-DeployDiagnosticsEventGridSystemTopic",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "defaultValue": "DeployIfNotExists"
+        },   
+      "effect-DeployDiagnosticsApplicationGateway": {
+          "type": "String",
+          "metadata": {
+            "displayName": "effect-DeployDiagnosticsApplicationGateway",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "defaultValue": "DeployIfNotExists"
+        },   
+      "effect-DeployDiagnosticsRedisCache": {
+          "type": "String",
+          "metadata": {
+            "displayName": "effect-DeployDiagnosticsRedisCache",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "defaultValue": "DeployIfNotExists"
+        },   
+      "effect-DeployDiagnosticsNetworkSecurityGroups": {
+          "type": "String",
+          "metadata": {
+            "displayName": "effect-DeployDiagnosticsNetworkSecurityGroups",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "defaultValue": "DeployIfNotExists"
+        },   
+      "effect-DeployDiagnosticsCognitiveServices": {
+          "type": "String",
+          "metadata": {
+            "displayName": "effect-DeployDiagnosticsCognitiveServices",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "defaultValue": "DeployIfNotExists"
+        },   
+      "effect-DeployDiagnosticsSQLMI": {
+          "type": "String",
+          "metadata": {
+            "displayName": "effect-DeployDiagnosticsSQLMI",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "defaultValue": "DeployIfNotExists"
+        },   
+      "effect-DeployDiagnosticsTrafficManager": {
+          "type": "String",
+          "metadata": {
+            "displayName": "effect-DeployDiagnosticsTrafficManager",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "defaultValue": "DeployIfNotExists"
+        },   
+      "effect-DeployDiagnosticsVirtualNetwork": {
+          "type": "String",
+          "metadata": {
+            "displayName": "effect-DeployDiagnosticsVirtualNetwork",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "defaultValue": "DeployIfNotExists"
+        },   
+      "effect-DeployDiagnosticsGrafana": {
+          "type": "String",
+          "metadata": {
+            "displayName": "effect-DeployDiagnosticsGrafana",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "defaultValue": "DeployIfNotExists"
+        },   
+      "effect-DeployDiagnosticsEventGridNamespace": {
+          "type": "String",
+          "metadata": {
+            "displayName": "effect-DeployDiagnosticsEventGridNamespace",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "defaultValue": "DeployIfNotExists"
+        },   
+      "effect-DeployDiagnosticsNotificationHubs": {
+          "type": "String",
+          "metadata": {
+            "displayName": "effect-DeployDiagnosticsNotificationHubs",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "defaultValue": "DeployIfNotExists"
+        },
+        "applicableResourceType-DeployDiagnosticsWebServerFarm": {
+          "type": "String",
+          "metadata": {
+            "displayName": "applicableResourceType",
+            "description": "Enable, audit or disable the execution of the policy",
+            "strongType": "resourceTypes"
+          }
+        },
+        "effect-DeployDiagnosticsWebServerFarm": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable, audit or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists"
+    },
+   
+    "logsToCollect-DeployDiagnosticsWebServerFarm": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "logsToCollect",
+        "description": "Array of logs to collect from a resource"
+      }
+    },
+    "metricsToCollect-DeployDiagnosticsWebServerFarm": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "metricsToCollect",
+        "description": "Array of metrics to collect from a resource"
+      }
+
+    },
+    "applicableResourceType-DeployDiagnosticsACI": {
+      "type": "String",
+      "metadata": {
+        "displayName": "applicableResourceType",
+        "description": "Enable, audit or disable the execution of the policy",
+        "strongType": "resourceTypes"
+      }
+    },
+    "effect-DeployDiagnosticsACI": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable, audit or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists"
+    },
+   
+    "logsToCollect-DeployDiagnosticsACI": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "logsToCollect",
+        "description": "Array of logs to collect from a resource"
+      }
+    },
+    "metricsToCollect-DeployDiagnosticsACI": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "metricsToCollect",
+        "description": "Array of metrics to collect from a resource"
+      }
+    },
+    "applicableResourceType-DeployDiagnosticsEventGridSub": {
+      "type": "String",
+      "metadata": {
+        "displayName": "applicableResourceType",
+        "description": "Enable, audit or disable the execution of the policy",
+        "strongType": "resourceTypes"
+      }
+    },
+    "effect-DeployDiagnosticsEventGridSub": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable, audit or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists"
+    },
+    "logsToCollect-DeployDiagnosticsEventGridSub": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "logsToCollect",
+        "description": "Array of logs to collect from a resource"
+      }
+    },
+    "metricsToCollect-DeployDiagnosticsEventGridSub": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "metricsToCollect",
+        "description": "Array of metrics to collect from a resource"
+      }
+ 
+
+},
+"applicableResourceType-DeployDiagnosticsNIC": {
+      "type": "String",
+      "metadata": {
+        "displayName": "applicableResourceType",
+        "description": "Enable, audit or disable the execution of the policy",
+        "strongType": "resourceTypes"
+      }
+    },
+    "effect-DeployDiagnosticsNIC": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable, audit or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists"
+    },
+   
+    "logsToCollect-DeployDiagnosticsNIC": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "logsToCollect",
+        "description": "Array of logs to collect from a resource"
+      }
+    },
+    "metricsToCollect-DeployDiagnosticsNIC": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "metricsToCollect",
+        "description": "Array of metrics to collect from a resource"
+      }
+    },
+    "applicableResourceType-DeployDiagnosticsVMSS": {
+      "type": "String",
+      "metadata": {
+        "displayName": "applicableResourceType",
+        "description": "Enable, audit or disable the execution of the policy",
+        "strongType": "resourceTypes"
+      }
+    },
+    "effect-DeployDiagnosticsVMSS": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable, audit or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists"
+    },
+
+    "logsToCollect-DeployDiagnosticsVMSS": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "logsToCollect",
+        "description": "Array of logs to collect from a resource"
+      }
+    },
+    "metricsToCollect-DeployDiagnosticsVMSS": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "metricsToCollect",
+        "description": "Array of metrics to collect from a resource"
+      }
+    },
+    "applicableResourceType-DeployDiagnosticsVM": {
+      "type": "String",
+      "metadata": {
+        "displayName": "applicableResourceType",
+        "description": "Enable, audit or disable the execution of the policy",
+        "strongType": "resourceTypes"
+      }
+    },
+    "effect-DeployDiagnosticsVM": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable, audit or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists"
+    },
+   
+    "logsToCollect-DeployDiagnosticsVM": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "logsToCollect",
+        "description": "Array of logs to collect from a resource"
+      }
+    },
+    "metricsToCollect-DeployDiagnosticsVM": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "metricsToCollect",
+        "description": "Array of metrics to collect from a resource"
+      }
+ 
+  },
+  "applicableResourceType-DeployDiagnosticsSA": {
+      "type": "String",
+      "metadata": {
+        "displayName": "applicableResourceType",
+        "description": "Enable, audit or disable the execution of the policy",
+        "strongType": "resourceTypes"
+      }
+    },
+    "effect-DeployDiagnosticsSA": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable, audit or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists"
+    },
+    "logsToCollect-DeployDiagnosticsSA": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "logsToCollect",
+        "description": "Array of logs to collect from a resource"
+      }
+    },
+    "metricsToCollect-DeployDiagnosticsSA": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "metricsToCollect-DeployDiagnosticsSA",
+        "description": "Array of metrics to collect from a resource"
+      }
+    },
+    "applicableResourceType-DeployDiagnosticsSABlob": {
+        "type": "String",
+        "metadata": {
+          "displayName": "applicableResourceType-DeployDiagnosticsSABlob",
+          "description": "Enable, audit or disable the execution of the policy",
+          "strongType": "resourceTypes"
+        },
+        "defaultValue": "microsoft.storage/storageaccounts/blobservices"
+    },
+    "applicableResourceType-DeployDiagnosticsSAFile": {
+        "type": "String",
+        "metadata": {
+          "displayName": "applicableResourceType-DeployDiagnosticsSAFile",
+          "description": "Enable, audit or disable the execution of the policy",
+          "strongType": "resourceTypes"
+        },
+        "defaultValue": "microsoft.storage/storageaccounts/fileservices"
+    },
+    "applicableResourceType-DeployDiagnosticsSAQueue": {
+        "type": "String",
+        "metadata": {
+          "displayName": "applicableResourceType-DeployDiagnosticsSAQueue",
+          "description": "Enable, audit or disable the execution of the policy",
+          "strongType": "resourceTypes"
+        },
+        "defaultValue": "microsoft.storage/storageaccounts/queueservices"
+    },
+    "applicableResourceType-DeployDiagnosticsSATable": {
+        "type": "String",
+        "metadata": {
+          "displayName": "applicableResourceType-DeployDiagnosticsSATable",
+          "description": "Enable, audit or disable the execution of the policy",
+          "strongType": "resourceTypes"
+        },
+        "defaultValue": "microsoft.storage/storageaccounts/tableservices"
+    },
+    "logsToCollect-DeployDiagnosticsSAsubresource": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "logsToCollect-DeployDiagnosticsSAsubresource",
+        "description": "Array of logs to collect from a resource"
+      },
+      "defaultValue": []
+    }
+
+}

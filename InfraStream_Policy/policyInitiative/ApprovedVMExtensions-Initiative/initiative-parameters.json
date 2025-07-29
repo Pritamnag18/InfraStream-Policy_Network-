@@ -1,0 +1,70 @@
+{
+    "amaVersion-CommonParameter": {
+        "type": "String",
+        "metadata": {
+          "description": "Version of Azure Monitor Agent",
+          "displayName": "amaVersion-CommonParameter"
+        },
+        "defaultValue": ""
+      },
+      "dcrResourceId-CommonParameter": {
+        "type": "String",
+        "metadata": {
+          "description": "Resource Id of the Data Collection Rule or the Data Collection Endpoint to be applied on the Linux machines in scope.",
+          "displayName": "dcrResourceId-CommonParameter"
+        }
+      },
+      "effect-CommonParameter": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-CommonParameter"
+        },
+        "defaultValue": "DeployIfNotExists"
+      },
+      "userAssignedIdentityId-CommonParameter": {
+        "type": "String",
+        "metadata": {
+          "description": "The Id of the user-assigned managed identity which Azure Monitor Agent will use for authentication",
+          "displayName": "userAssignedIdentityId-CommonParameter"
+        },
+        "defaultValue": ""
+      },
+      "amaVersion-AddExtensions-Vm-Windows-AMA": {
+      "type": "String",
+      "metadata": {
+        "displayName": "amaVersion",
+        "description": "Version of Azure Monotir Agent"
+      },
+      "defaultValue": ""
+    },
+    "dcrResourceId-AddExtensions-Vm-Windows-AMA": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Data Collection Rule Resource Id or Data Collection Endpoint Resource Id",
+        "description": "Resource Id of the Data Collection Rule or the Data Collection Endpoint to be applied on the Linux machines in scope."
+      }
+    },
+    "effect-AddExtensions-Vm-Windows-AMA": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists"
+    },
+    "userAssignedIdentityId-AddExtensions-Vm-Windows-AMA": {
+      "type": "String",
+      "metadata": {
+        "displayName": "User-Assigned Managed Identity resourceId",
+        "description": "The Id of the user-assigned managed identity which Azure Monitor Agent will use"
+      },
+      "defaultValue": ""
+    }
+ 
+
+}

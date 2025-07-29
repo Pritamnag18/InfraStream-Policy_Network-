@@ -1,0 +1,497 @@
+{
+    "effect-AppServiceVnetRouteAllPolicy": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-AppServiceVnetRouteAllPolicy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+      "effect-DisableFunctionAppSlotsPublicNetwork": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-DisableFunctionAppSlotsPublicNetwork"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+      "effect-PCDBlockStrAccPAc": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-PCDBlockStrAccPAc"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+      "effect-DisableVNetPNAAppServiceSlot": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "DisableVNetPNAAppServiceSlot"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-DisableStoragePublicAccess": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-DisableStoragePublicAccess"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-DisablePNAAppServiceslots": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-DisablePNAAppServiceslots"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-EnableVNetAAppServiceslots": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-EnableVNetAAppServiceslots"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-InjectVNetAAppService": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-InjectVNetAAppService"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-EnableVNetAAppServiceRouting": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-EnableVNetAAppServiceRouting"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-ReachablePNAppService": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-ReachablePNAppService"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-EanbleCosmosDBAccountsFW": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-EanbleCosmosDBAccountsFW"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-DisableEGNanespacePublicNetwork": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-DisableEGNanespacePublicNetwork"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-EnableAZKeyVaultFW": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-EnableAZKeyVaultFW"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-DisableAZMGrafanaPublicNetwork": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-DisableAZMGrafanaPublicNetwork"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-UseVetInjectonContainerApp": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-UseVetInjectonContainerApp"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-DisableContainerAppPublicNetwork": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-DisableContainerAppPublicNetwork"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-DisableAppServiceSlotsVnetRouteAllPolicy": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-DisableAppServiceSlotsVnetRouteAllPolicy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-DisableAppServiceVnetRouteAllPolicy": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-DisableAppServiceVnetRouteAllPolicy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-BlockPublicKeyVaults": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-BlockPublicKeyVaults"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-DisablePublicNetPostgresFlex": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-DisablePublicNetPostgresFlex"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-PCDDisablePNAEventHub": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-PCDDisablePNAEventHub"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-PCDEnableFunctionAppConfRoutingVnetPolicy": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-PCDEnableFunctionAppConfRoutingVnetPolicy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-PCDEnableFunctionAppSlotsRoutingVnetPolicy": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-PCDEnableFunctionAppSlotsRoutingVnetPolicy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-PCDEnableFunctionAppSlotsVnetRouteAllPolicy": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-PCDEnableFunctionAppSlotsVnetRouteAllPolicy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-PCDEnableFunctionAppVnetRouteAllPolicy": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-PCDEnableFunctionAppVnetRouteAllPolicy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-PCDDisableCosmosDbPNA": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-PCDDisableCosmosDbPNA"
+        },
+        "allowedValues": [
+          "Append",
+          "append",
+          "disabled",
+          "Disabled"
+        ],
+        "defaultValue": "Append"
+      },
+    "effect-PCDPrivateEnspointConfigRedisEnterprisePNA": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-PCDPrivateEnspointConfigRedisEnterprisePNA"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-DisableAzureSQLDbPNA": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-DisableAzureSQLDbPNA"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-DisableAzureFileSyncPNA": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-DisableAzureFileSyncPNA"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-DisableBatchAcoountPNA": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-DisableBatchAcoountPNA"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-DisableMSSQLflexibleServersPNA": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-DisableMSSQLflexibleServersPNA"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-DisablePostgreSQLflexibleServersPNA": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-DisablePostgreSQLflexibleServersPNA"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-DisablePostgreSQLServersPNA": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-DisablePostgreSQLServersPNA"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-RestrictStrAccountNetworkAccess": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-RestrictStrAccountNetworkAccess"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-RestrictStrAccountVNetRule": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "effect-RestrictStrAccountVNetRule"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Audit"
+      },
+      "effect-AppServiceAppsPNA": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "Audit",
+        "Disabled",
+        "Deny"
+      ],
+      "defaultValue": "Audit"
+    },
+    "effect-FunctionAppsPNA": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "Audit",
+        "Disabled",
+        "Deny"
+      ],
+      "defaultValue": "Audit"
+    },
+    "effect-DenyPublicIPsForDatabricksCluster": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "Audit",
+        "Disabled",
+        "Deny"
+      ],
+      "defaultValue": "Deny"
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "blockListResourceTypes-BlockList-ResourceTypes": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "blockListResourceTypes-BlockList-ResourceTypes",
+        "description": "Organization - BlockList - Resource Types"
+      },
+      "defaultValue": [
+        ""
+      ]
+    },
+    "effect-BlockList-ResourceTypes": {
+      "type": "String",
+      "metadata": {
+        "displayName": "effect-BlockList-ResourceTypes",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "Audit",
+        "Deny",
+        "Disabled"
+      ],
+      "defaultValue": "Audit"
+    },
+    "actionNames-Organization-Rsc-Protect-NetWatcher": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "actionNames-Organization-Rsc-Protect-NetWatcher",
+        "description": "List of action names"
+      },
+      "defaultValue": [
+        "delete"
+      ]
+    },
+    "effect-Organization-Rsc-Protect-NetWatcher": {
+      "type": "String",
+      "metadata": {
+        "displayName": "effect-Organization-Rsc-Protect-NetWatcher",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "DenyAction",
+        "Disabled"
+      ],
+      "defaultValue": "DenyAction"
+    },
+    "actionNames-Organization-Rsc-Protect-Rt-Udr": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "actionNames-Organization-Rsc-Protect-Rt-Udr",
+        "description": "List of action names"
+      },
+      "defaultValue": [
+        "delete"
+      ]
+    },
+    "effect-Organization-Rsc-Protect-Rt-Udr": {
+      "type": "String",
+      "metadata": {
+        "displayName": "effect-Organization-Rsc-Protect-Rt-Udr",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "DenyAction",
+        "Disabled"
+      ],
+      "defaultValue": "DenyAction"
+    },
+    "protectedRoutesNames-Organization-Rsc-Protect-Rt-Udr": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "protectedRoutesNames-Organization-Rsc-Protect-Rt-Udr",
+        "description": "List of proteced routes names"
+      },
+      "defaultValue": []
+    }    
+
+}

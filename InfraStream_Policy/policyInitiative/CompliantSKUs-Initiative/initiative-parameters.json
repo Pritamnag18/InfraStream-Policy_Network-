@@ -1,0 +1,161 @@
+{
+    "effect-CompliantSKUsAPIManagementServiceVnet": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect-CompliantSKUsAPIManagementServiceVnet",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Audit"
+      },
+    "listOfAllowedSKUs-CompliantSKUsAPIManagementServiceVnet": {
+        "type": "Array",
+        "metadata": {
+          "description": "The list of SKUs that can be specified for Azure API Management service.",
+          "displayName": "Allowed SKUs"
+        },
+        "allowedValues": [
+          "Developer",
+          "Basic",
+          "Standard",
+          "Premium",
+          "Isolated",
+          "Consumption"
+        ],
+        "defaultValue": [
+          "Developer",
+          "Premium",
+          "Isolated"
+        ]
+      },
+    "effect-CompliantSKUsAppConfigUsePrivateLink": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Audit"
+      },
+    "effect-CompliantSKUsAppServiceAppUsePrivateLink": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Audit"
+      }, 
+    "effect-CompliantSKUsAzureCognitiveSearchUsePrivateLink": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or Deny the execution of the policy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Audit"
+      },  
+    "effect-CompliantSKUsContainerRegistriesUsePrivateLink": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Audit"
+      },
+    "allowedSkuNames-CompliantSKUsPCDNonCompliantSKUEventHub": {
+        "type": "Array",
+        "metadata": {
+          "description": "Specifies the allowed SKU names.",
+          "displayName": "Allowed SKU Names"
+        },
+        "defaultValue": [
+          "Standard",
+          "Premium"
+        ]
+      },
+    "effect-CompliantSKUsPCDNonCompliantSKUEventHub": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "Effect"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Deny"
+      }, 
+    "effect-CompliantSKUsPCDNonCompliantSKUsAGW": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "Effect"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Deny"
+      },
+    "effect-CompliantSKUsStrAccountLimitAllowedSKUs": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the audit policy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Deny"
+      },
+    "effect-DenyNonPremiumDatabricks": {
+        "type": "String",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "Effect-DenyNonPremiumDatabricks"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled",
+          "Deny"
+        ],
+        "defaultValue": "Deny"
+      },
+    "listOfAllowedSKUs-CompliantSKUsStrAccountLimitAllowedSKUs": {
+        "type": "Array",
+        "metadata": {
+          "description": "The list of SKUs that can be specified for storage accounts.",
+          "displayName": "Allowed SKUs",
+          "strongType": "StorageSKUs"
+        }
+      }
+
+
+
+}

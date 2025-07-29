@@ -1,0 +1,152 @@
+{
+    "listOfAllowedLocations-AllowedLocationsForResourceGroups": {
+        "type": "Array",
+        "metadata": {
+            "description": "The list of allowed locations for RG.",
+            "displayName": "listOfAllowedLocations-AllowedLocationsForResourceGroups",
+            "strongType": "location"
+        }
+    },
+    "effect-AllowedLocationsForResourceGroups": {
+        "type": "String",
+        "metadata": {
+            "description": "Effect can be decided here.",
+            "displayName": "effect-AllowedLocationsForResourceGroups"
+        }
+    },
+
+    "listOfAllowedLocations-AllowedLocationsForResources": {
+        "type": "Array",
+        "metadata": {
+            "description": "The list of allowed locations for resources.",
+            "displayName": "listOfAllowedLocations-AllowedLocationsForResources",
+            "strongType": "location"
+        }
+    },
+    "effect-AllowedLocationsForResources": {
+        "type": "String",
+        "metadata": {
+            "description": "Effect can be decided here..",
+            "displayName": "effect-AllowedLocationsForResources"
+        }
+    },
+    "effect-AllowListWinServerLicenceVmss": {
+        "type": "String",
+        "metadata": {
+            "description": "Effect can be decided here..",
+            "displayName": "effect-AllowListWinServerLicenceVmss"
+        },
+        "defaultValue": "Audit"
+    },
+    "effect-AllowList-UbuntuServerSKUs": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "Audit",
+        "Deny",
+        "Disabled"
+      ],
+      "defaultValue": "Deny"
+    },
+    "effect-AllowList-RHELServerSKUs": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "Audit",
+        "Deny",
+        "Disabled"
+      ],
+      "defaultValue": "Deny"
+    },
+    "effect-AllowList-WinServerSKUs": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "Audit",
+        "Deny",
+        "Disabled"
+      ],
+      "defaultValue": "Deny"
+    },
+    "effect-AllowList-ResourceTypes": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "Audit",
+        "Deny",
+        "Disabled"
+      ],
+      "defaultValue": "Deny"
+    },
+    "effect-PIP-LimitSvcs": {
+        "type": "string",
+        "metadata": {
+          "displayName": "effectPolicyLimitSvcs",
+          "description": "Effect of Policy (Audit, Deny, Disabled)"
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Deny"
+      },
+      "allowListResourceTypesForAppTeam": {
+        "type": "Array",
+        "metadata": {
+          "displayName": "List Of allowed resources for Application team",
+          "description": "List Of allowed resources for Application team"
+        },
+        "defaultValue": [
+          "Microsoft.KeyVault/vaults",
+          "Microsoft.ManagedIdentity/userAssignedIdentities",
+          "Microsoft.Portal/dashboards",
+          "Microsoft.ResourceGraph/queries",
+          "Microsoft.Storage/storageAccounts"
+        ]
+      },
+      "allowListResourceTypesPlatform": {
+        "type": "Array",
+        "metadata": {
+          "displayName": "List Of allowed resources for platform team, these are used in the provisioning of application landing zone.",
+          "description": "List Of allowed resources for platform team, these are used in the provisioning of application landing zone."
+        },
+        "defaultValue": [
+          "Microsoft.KeyVault/vaults",
+          "Microsoft.ManagedIdentity/userAssignedIdentities",
+          "Microsoft.Network/networkInterfaces",
+          "Microsoft.Network/networkSecurityGroups",
+          "Microsoft.Network/networkWatchers",
+          "Microsoft.Network/privateEndpoints",
+          "Microsoft.Network/privateLinkServices",
+          "Microsoft.Network/routeTables",
+          "Microsoft.Network/virtualNetworks"
+        ]
+      },
+      "allowListRscProvidersPlatform": {
+        "type": "Array",
+        "metadata": {
+          "displayName": "List Of allowed providers",
+          "description": "List Of allowed providers - limited list for Platform team to manage access, monitoring, policies and governace."
+        },
+        "defaultValue": [
+          "Microsoft.Authorization",
+          "microsoft.insights",
+          "Microsoft.Resources",
+          "Microsoft.Security"
+        ]
+      }
+
+}
