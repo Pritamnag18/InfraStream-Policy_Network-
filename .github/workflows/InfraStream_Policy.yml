@@ -2,7 +2,7 @@ name: 'Terraform_Deploy_InfraStream_Policy'
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
 
 permissions:
@@ -81,7 +81,7 @@ jobs:
       ARM_CLIENT_SECRET: "${{ secrets.AZURE_AD_CLIENT_SECRET }}"
       storage_account_name: "${{ secrets.STORAGE_ACCOUNT_NAME }}"
       container_name: "${{ secrets.CONTAINER_NAME }}"
-      key: "${{ secrets.KEY }}"
+      key: "${{ secrets.KEY_POLDEF }}"
     defaults:
       run:
         shell: bash
@@ -103,7 +103,7 @@ jobs:
         run: |
           echo "Storage Account Name: ${{ secrets.STORAGE_ACCOUNT_NAME }}"
           echo "Container Name: ${{ secrets.CONTAINER_NAME }}"
-          echo "Key: ${{ secrets.KEY }}"
+          echo "Key: ${{ secrets.KEY_POLDEF }}"
 
       - name: Terraform Format
         run: |
@@ -141,7 +141,7 @@ jobs:
       ARM_CLIENT_SECRET: "${{ secrets.AZURE_AD_CLIENT_SECRET }}"
       storage_account_name: "${{ secrets.STORAGE_ACCOUNT_NAME }}"
       container_name: "${{ secrets.CONTAINER_NAME }}"
-      key: "${{ secrets.KEY }}"
+      key: "${{ secrets.KEY_POLINT }}"
     defaults:
       run:
         shell: bash
@@ -163,7 +163,7 @@ jobs:
         run: |
           echo "Storage Account Name: ${{ secrets.STORAGE_ACCOUNT_NAME }}"
           echo "Container Name: ${{ secrets.CONTAINER_NAME }}"
-          echo "Key: ${{ secrets.KEY }}"
+          echo "Key: ${{ secrets.KEY_POLINT }}"
 
       - name: Terraform Format
         run: |
@@ -201,7 +201,7 @@ jobs:
       ARM_CLIENT_SECRET: "${{ secrets.AZURE_AD_CLIENT_SECRET }}"
       storage_account_name: "${{ secrets.STORAGE_ACCOUNT_NAME }}"
       container_name: "${{ secrets.CONTAINER_NAME }}"
-      key: "${{ secrets.KEY }}"
+      key: "${{ secrets.KEY_POLASS }}"
     defaults:
       run:
         shell: bash
@@ -223,7 +223,7 @@ jobs:
         run: |
           echo "Storage Account Name: ${{ secrets.STORAGE_ACCOUNT_NAME }}"
           echo "Container Name: ${{ secrets.CONTAINER_NAME }}"
-          echo "Key: ${{ secrets.KEY }}"
+          echo "Key: ${{ secrets.KEY_POLASS }}"
 
       - name: Terraform Format
         run: |
