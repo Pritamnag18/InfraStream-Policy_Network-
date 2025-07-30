@@ -1,0 +1,180 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pr: 
+- main
+
+pool: Self-Hosted-InfraStream
+
+jobs:
+- job: deploy_virtual_network
+  steps:
+    - task: TerraformInstaller@1
+      inputs:
+        terraformVersion: 'latest'
+    - task: TerraformTaskV4@4
+      displayName: 'Terraform-init'
+      inputs:
+        provider: 'azurerm'
+        command: 'init'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/Virtual_Network'
+        backendServiceArm: 'pipeline-InfraStream'
+        backendAzureRmResourceGroupName: 'rg-infras-wus-03'
+        backendAzureRmStorageAccountName: 'stgtfsinfraswus01'
+        backendAzureRmContainerName: 'continfraswus01'
+        backendAzureRmKey: 'terraform.tfstate'
+
+    - task: TerraformTaskV4@4
+      displayName: 'Terraform-plan'
+      inputs:
+        provider: 'azurerm'
+        command: 'plan'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/Virtual_Network'
+        environmentServiceNameAzureRM: 'pipeline-InfraStream'
+        backendAzureRmResourceGroupName: 'rg-infras-wus-03'
+        backendAzureRmStorageAccountName: 'stgtfsinfraswus01'
+        backendAzureRmContainerName: 'continfraswus01'
+        backendAzureRmKey: 'terraform.tfstate'
+
+    - task: TerraformTaskV4@4
+      displayName: 'Terraform-apply'
+      inputs:
+        provider: 'azurerm'
+        command: 'apply'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/Virtual_Network'
+        environmentServiceNameAzureRM: 'pipeline-InfraStream'
+        backendAzureRmResourceGroupName: 'rg-infras-wus-03'
+        backendAzureRmStorageAccountName: 'stgtfsinfraswus01'
+        backendAzureRmContainerName: 'continfraswus01'
+        backendAzureRmKey: 'terraform.tfstate'
+
+- job: deploy_policy_definition
+  dependsOn: deploy_virtual_network
+  steps:
+    - task: TerraformInstaller@1
+      inputs:
+        terraformVersion: 'latest'
+    - task: TerraformTaskV4@4
+      displayName: 'Terraform-init'
+      inputs:
+        provider: 'azurerm'
+        command: 'init'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/policyDefinition'
+        backendServiceArm: 'pipeline-InfraStream'
+        backendAzureRmResourceGroupName: 'rg-infras-wus-03'
+        backendAzureRmStorageAccountName: 'stgtfsinfraswus01'
+        backendAzureRmContainerName: 'continfraswus01'
+        backendAzureRmKey: 'poldefterraform.tfstate'
+
+    - task: TerraformTaskV4@4
+      displayName: 'Terraform-plan'
+      inputs:
+        provider: 'azurerm'
+        command: 'plan'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/policyDefinition'
+        environmentServiceNameAzureRM: 'pipeline-InfraStream'
+        backendAzureRmResourceGroupName: 'rg-infras-wus-03'
+        backendAzureRmStorageAccountName: 'stgtfsinfraswus01'
+        backendAzureRmContainerName: 'continfraswus01'
+        backendAzureRmKey: 'poldefterraform.tfstate'
+
+    - task: TerraformTaskV4@4
+      displayName: 'Terraform-apply'
+      inputs:
+        provider: 'azurerm'
+        command: 'apply'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/policyDefinition'
+        environmentServiceNameAzureRM: 'pipeline-InfraStream'
+        backendAzureRmResourceGroupName: 'rg-infras-wus-03'
+        backendAzureRmStorageAccountName: 'stgtfsinfraswus01'
+        backendAzureRmContainerName: 'continfraswus01'
+        backendAzureRmKey: 'poldefterraform.tfstate'
+
+- job: deploy_policy_initiative
+  dependsOn: deploy_policy_definition
+  steps:
+    - task: TerraformInstaller@1
+      inputs:
+        terraformVersion: 'latest'
+    - task: TerraformTaskV4@4
+      displayName: 'Terraform-init'
+      inputs:
+        provider: 'azurerm'
+        command: 'init'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/policyInitiative'
+        backendServiceArm: 'pipeline-InfraStream'
+        backendAzureRmResourceGroupName: 'rg-infras-wus-03'
+        backendAzureRmStorageAccountName: 'stgtfsinfraswus01'
+        backendAzureRmContainerName: 'continfraswus01'
+        backendAzureRmKey: 'polintterraform.tfstate'
+
+    - task: TerraformTaskV4@4
+      displayName: 'Terraform-plan'
+      inputs:
+        provider: 'azurerm'
+        command: 'plan'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/policyInitiative'
+        environmentServiceNameAzureRM: 'pipeline-InfraStream'
+        backendAzureRmResourceGroupName: 'rg-infras-wus-03'
+        backendAzureRmStorageAccountName: 'stgtfsinfraswus01'
+        backendAzureRmContainerName: 'continfraswus01'
+        backendAzureRmKey: 'polintterraform.tfstate'
+
+    - task: TerraformTaskV4@4
+      displayName: 'Terraform-apply'
+      inputs:
+        provider: 'azurerm'
+        command: 'apply'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/policyInitiative'
+        environmentServiceNameAzureRM: 'pipeline-InfraStream'
+        backendAzureRmResourceGroupName: 'rg-infras-wus-03'
+        backendAzureRmStorageAccountName: 'stgtfsinfraswus01'
+        backendAzureRmContainerName: 'continfraswus01'
+        backendAzureRmKey: 'polintterraform.tfstate'
+
+- job: deploy_policy_assignment
+  dependsOn: deploy_policy_initiative
+  steps:
+    - task: TerraformInstaller@1
+      inputs:
+        terraformVersion: 'latest'
+    - task: TerraformTaskV4@4
+      displayName: 'Terraform-init'
+      inputs:
+        provider: 'azurerm'
+        command: 'init'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/policyAssignment'
+        backendServiceArm: 'pipeline-InfraStream'
+        backendAzureRmResourceGroupName: 'rg-infras-wus-03'
+        backendAzureRmStorageAccountName: 'stgtfsinfraswus01'
+        backendAzureRmContainerName: 'continfraswus01'
+        backendAzureRmKey: 'polassterraform.tfstate'
+
+    - task: TerraformTaskV4@4
+      displayName: 'Terraform-plan'
+      inputs:
+        provider: 'azurerm'
+        command: 'plan'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/policyAssignment'
+        environmentServiceNameAzureRM: 'pipeline-InfraStream'
+        backendAzureRmResourceGroupName: 'rg-infras-wus-03'
+        backendAzureRmStorageAccountName: 'stgtfsinfraswus01'
+        backendAzureRmContainerName: 'continfraswus01'
+        backendAzureRmKey: 'polassterraform.tfstate'
+
+    - task: TerraformTaskV4@4
+      displayName: 'Terraform-apply'
+      inputs:
+        provider: 'azurerm'
+        command: 'apply'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/policyAssignment'
+        environmentServiceNameAzureRM: 'pipeline-InfraStream'
+        backendAzureRmResourceGroupName: 'rg-infras-wus-03'
+        backendAzureRmStorageAccountName: 'stgtfsinfraswus01'
+        backendAzureRmContainerName: 'continfraswus01'
+        backendAzureRmKey: 'polassterraform.tfstate'
